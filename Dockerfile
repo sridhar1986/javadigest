@@ -9,5 +9,5 @@ COPY ./src ./src
 RUN mvn dependency:go-offline -B
 RUN mvn package
 WORKDIR /usr/app
-COPY target/JavaDigest-0.4.0-jar-with-dependencies.jar /usr/app/JavaDigest.jar
+COPY ./target/JavaDigest-0.4.0-jar-with-dependencies.jar /usr/app/JavaDigest.jar
 CMD ["java", "-jar", "JavaDigest.jar"]
