@@ -8,6 +8,6 @@ COPY ./pom.xml ./pom.xml
 COPY ./src ./src
 RUN mvn dependency:go-offline -B
 RUN mvn package
-COPY target/JavaDigest-0.4.0-jar-with-dependencies.jar /usr/app/JavaDigest.jar
+COPY JavaDigest-0.4.0-jar-with-dependencies.jar /usr/app/JavaDigest.jar
 WORKDIR /usr/app
 CMD ["java", "-jar", "JavaDigest.jar"]
